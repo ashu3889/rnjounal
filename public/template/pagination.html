@@ -1,0 +1,66 @@
+<!– code for pagination –>
+
+<div  ng-controller="tableController" >
+
+<h2>Welcome to Pagination App</h2>
+
+<div class="alert alert-info">
+
+<h4> sortType : {{sortType}}</h4>
+
+<h4>sortReverse : {{sortReverse}}</h4>
+
+<h4>totalPage : {{totalPage}}</h4>
+
+<h4>currentPage : {{currentPage}}</h4>
+
+
+</div>
+
+<input ng-model="searchtext" placeholder="search for name"></input>
+
+
+<table class="table">
+
+<thead>
+<tr>
+<th><a ng-click="sortType ='name' ; sortReverse = !sortReverse">Name</a></th>
+<th><a ng-click="sortType ='email' ; sortReverse = !sortReverse">Email</a></th>
+<th><a ng-click="sortType ='age' ; sortReverse = !sortReverse">Age</a></th>
+</tr>
+</thead>
+
+<tbody>
+<tr ng-repeat="data in tableData | startFrom :currentPage*pageSize | limitTo: pageSize | orderBy :sortType: sortReverse | filter :searchtext ">
+<td>{{data.name | uppercase}}</td>
+<td>{{data.email}}</td>
+<td>{{data.age}}</td>
+</tr>
+</tbody>
+</table>
+
+<ul style="display: inline">
+<li style="display: inline;"><button class="btn-primary" ng-disabled="currentPage ==0" ng-click="currentPage= currentPage-1">Previous</button></li>
+<li style="display: inline;">{{currentPage +1}} / {{totalPage}}</li>
+<li style="display: inline;"><button class="btn-primary" ng-disabled="currentPage >=totalPage -1" ng-click="currentPage= currentPage+1">Next</button></li>
+</ul>
+
+<hr></hr>
+
+
+
+<div  ui-view="">
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+

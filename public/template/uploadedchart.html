@@ -1,0 +1,25 @@
+<div ng-controller="doneChartsUploadController">
+
+<div ng-if="dataavail==1">
+
+   <div class="container" style="margin:20px;">
+        <div class=" col-sm-12 row">
+            <div class="col-sm-4" ng-repeat="data in imageData">
+                <div class="col-sm-12 thumbnail text-center">
+                    <img alt="" class="img-responsive" ng-src="/images/{{data.image}}">
+
+                    <div class="caption">
+                        <h4>{{data.tradeDetail}}</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+	
+	
+</div>
+
+
+</div>
+

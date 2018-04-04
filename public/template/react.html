@@ -1,0 +1,49 @@
+<div ng-controller="crudContrroller">
+
+
+<h2>Simple CRUD Application</h2>
+<hr/>
+
+<table class="table" >
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+<th>Age</th>
+</tr>
+</thead>
+<tbody>
+
+<div ></div>
+<tr ng-repeat="data in tabledata">
+<td>{{data.name}}</td>
+<td>{{data.address}}</td>
+<td>{{data.age}}</td>
+<td><button class="btn btn-info" ng-click="beginUpdate(data)">Edit Employee</button> <button class="btn btn-danger" ng-click="deleteEmployee(data._id)"  >Delete Employee</button></td>
+</tr>
+</tbody>
+</table>
+
+<hr/>
+
+<table class="table" >
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+<th>Age</th>
+</tr>
+</thead>
+<tbody>
+
+<div ></div>
+<tr ng-model="doc">
+<td><input ng-model="doc.name" placeholder="Add name"></input></td>
+<td><input ng-model="doc.address" placeholder="Add address"></input></td>
+<td><input ng-model="doc.age" placeholder="Add age"></input></td>
+<td><button class="btn btn-success" ng-click="addEmployee(doc)" >Add Employee</button> <button class="btn btn-warning" ng-click="updateEmployee(doc)" >Update Employee</button></td>
+</tr>
+</tbody>
+</table>
+
+</div>

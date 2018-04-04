@@ -1,0 +1,26 @@
+1)git init
+
+2) git add .
+
+3) heroku create
+
+
+4) git config --global user.email "ashutosh.singh3889@gmail.com"
+
+5) git config --global user.name "Ashutosh Singh"
+
+6) git commit -am "first commit" 
+
+7) git push heroku master
+
+//to check heroku logs
+heroku logs -n 1500
+
+process.env.PORT || 3000
+
+
+Mongolab Steps:
+1)First create a new database. copy the url .
+mongodb://ashu3889:amma2011@ds161410.mlab.com:61410/pagination
+
+2)Add new user assign userid and passsword to database

@@ -1,0 +1,45 @@
+{
+    "liData":[{
+            "name":"AngularJS",
+            "sref":"angular"
+        },
+        {
+            "name":"Mongodb",
+            "sref":"mongodb"
+        },
+        {
+            "name":"ReactJS",
+            "sref":"reactjs"
+        },
+        {
+            "name":"React & Redux",
+            "sref":"redux"
+        },
+        {
+            "name":"Mongoose",
+            "sref":"mongoose"
+        },
+        {
+            "name":"EmberJS",
+            "sref":"emberjs"
+        },
+        {
+            "name":"Pagination with Custom Directive",
+            "sref":"customPagination"
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
