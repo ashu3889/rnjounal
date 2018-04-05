@@ -303,7 +303,7 @@ var uploadTradeRouter = express.Router();
 
 			         doc.tradeDetail = req.body.tradeDetail,
                      doc.tradeMistakes= req.body.tradeMistakes,				
-                     doc.image=  filename,
+                     doc.image=  req.body.image,
                      doc.comment =  req.body.comment,
                      doc.likes =  req.body.likes
 			 
