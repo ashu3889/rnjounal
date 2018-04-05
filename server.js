@@ -287,9 +287,8 @@ var uploadRouter = express.Router();
 
 var uploadTradeRouter = express.Router();
 
- /*uploadTradeRouter.route('/trade').put(function(req, res) {
-  
-    
+ uploadTradeRouter.route('/trade').put(function(req, res) { 
+ console.log('put query called');   
  
         var id = req.body._id;	
 		console.log('employee id isssssss' + id);
@@ -300,9 +299,13 @@ var uploadTradeRouter = express.Router();
 	    }
 		else{
 			 console.log('doc doc name' +  doc);
-			doc.name = req.body.name;
-			doc.address = req.body.address;
-			doc.age = req.body.age;	
+				
+
+			         doc.tradeDetail = req.body.tradeDetail,
+                     doc.tradeMistakes= req.body.tradeMistakes,				
+                     doc.image=  filename,
+                     doc.comment =  req.body.comment,
+                     doc.likes =  req.body.likes
 			 
 			
              doc.save(function(err) {
@@ -316,7 +319,7 @@ var uploadTradeRouter = express.Router();
 		
 	})
   
-    });*/
+    });
 
 
  uploadTradeRouter.post('/trade' , upload.any() , function(req, res, next){
