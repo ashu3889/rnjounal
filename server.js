@@ -287,6 +287,37 @@ var uploadRouter = express.Router();
 
 var uploadTradeRouter = express.Router();
 
+ /*uploadTradeRouter.route('/trade').put(function(req, res) {
+  
+    
+ 
+        var id = req.body._id;	
+		console.log('employee id isssssss' + id);
+ 
+    tradeModel.findById(id,function(err, doc){
+		if(err){
+		console.log('error occurs');
+	    }
+		else{
+			 console.log('doc doc name' +  doc);
+			doc.name = req.body.name;
+			doc.address = req.body.address;
+			doc.age = req.body.age;	
+			 
+			
+             doc.save(function(err) {
+                 if (err)
+                     res.send(err);
+
+                 res.json({ message: 'doc updated!' , docum : doc });
+             });	
+			
+		}
+		
+	})
+  
+    });*/
+
 
  uploadTradeRouter.post('/trade' , upload.any() , function(req, res, next){
 	
